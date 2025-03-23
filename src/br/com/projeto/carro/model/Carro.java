@@ -76,24 +76,24 @@ public class Carro {
 
 
 
-    public void exibirinfos(){
+    public void exibirInfos(){
         System.out.println("--------------------------------");
         System.out.println("            Exibindo");
         System.out.println("--------------------------------");
         System.out.println();
-        System.out.println("NOME DO CARRO:" + " " + this.modelo);
+        System.out.printf("NOME DO CARRO: %s",this.modelo);
         System.out.println();
-        System.out.println("CHASSI:" + " " + this.chassi);
+        System.out.printf("CHASSI:%s",this.chassi);
         System.out.println();
-        System.out.println("PLACA:" + " " + this.placa);
+        System.out.printf("PLACA:%s",this.placa);
         System.out.println();
-        System.out.println("ESTA MOVIMENTO?:" + " " + this.emMovimento);
+        System.out.printf("ESTA MOVIMENTO?:%b%n",this.emMovimento);
+        System.out.printf("ESTA LIGADO?:%b%n",this.estaLigado);
         System.out.println();
-        System.out.println("ESTA LIGADO?:" + " " + this.estaLigado);
+        System.out.printf("QUANTIDADE DE COMBS:%.2f",this.quantidadeCombustivel);
         System.out.println();
-        System.out.println("QUANTIDADE DE COMBS:" + " " + this.quantidadeCombustivel);
+        System.out.printf("VELOCIDADE:%d",this.velocidade);
         System.out.println();
-        System.out.println("VELOCIDADE:" + " " + this.velocidade);
     }
 
 }
