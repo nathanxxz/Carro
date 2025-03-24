@@ -20,7 +20,7 @@ public class Carro {
             System.out.println("O carro esta sem gasolina, nao tem como ligar");
             this.estaLigado=false;
         }
-        else if (this.quantidadeCombustivel>0){
+        if (this.quantidadeCombustivel>0){
             this.estaLigado=true;
             this.quantidadeCombustivel-=5;
             System.out.println("Ligando o carro e a quantidade de combustivel é" + " " + this.quantidadeCombustivel);
@@ -43,13 +43,12 @@ public class Carro {
         if (this.quantidadeCombustivel==0){
             System.out.println("Impossivel acelerar o carro sem gasosa");
         }
-
-        this.emMovimento=true;
+        if (this.emMovimento=true){
         this.velocidade+=icrmt;
         System.out.println("Acelerando e a velocidade é" + " " + this.velocidade);
         this.quantidadeCombustivel-=5;
 
-    }
+    }}
     public void freiar(){
         if (this.velocidade>0){
             this.velocidade-=2;
@@ -67,8 +66,7 @@ public class Carro {
             System.out.println("Carro em alta velocidade, nao ha como parar, reduza antes");
 
         }
-        else {
-            this.emMovimento=false;
+        if ( this.emMovimento=false){
             System.out.println("Carro parou");
         }
     }
@@ -81,18 +79,13 @@ public class Carro {
         System.out.println("            Exibindo");
         System.out.println("--------------------------------");
         System.out.println();
-        System.out.printf("NOME DO CARRO: %s",this.modelo);
-        System.out.println();
-        System.out.printf("CHASSI:%s",this.chassi);
-        System.out.println();
-        System.out.printf("PLACA:%s",this.placa);
-        System.out.println();
-        System.out.printf("ESTA MOVIMENTO?:%b%n",this.emMovimento);
-        System.out.printf("ESTA LIGADO?:%b%n",this.estaLigado);
-        System.out.println();
-        System.out.printf("QUANTIDADE DE COMBS:%.2f",this.quantidadeCombustivel);
-        System.out.println();
-        System.out.printf("VELOCIDADE:%d",this.velocidade);
+        System.out.printf("NOME DO CARRO: %s\n",this.modelo);
+        System.out.printf("CHASSI:%s\n",this.chassi);
+        System.out.printf("PLACA:%s\n",this.placa);
+        System.out.printf("ESTA MOVIMENTO?:%b\n",this.emMovimento);
+        System.out.printf("ESTA LIGADO?:%b\n",this.estaLigado);
+        System.out.printf("QUANTIDADE DE COMBS:%.2f\n",this.quantidadeCombustivel);
+        System.out.printf("VELOCIDADE:%d\n",this.velocidade);
         System.out.println();
     }
 
